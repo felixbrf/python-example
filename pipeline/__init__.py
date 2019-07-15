@@ -19,17 +19,17 @@ def CreateNamespace(args):
 
 def CreateDeployment(args):
     logging.info("CreateDeployment has been started!")
-    time.sleep(8)
+    time.sleep(5)
     logging.info("CreateDeployment has been finished!")
 
 def CreateService(args):
     logging.info("CreateService has been started!")
-    time.sleep(9)
+    time.sleep(10)
     logging.info("CreateService has been finished!")
 
 def CreateIngress(args):
     logging.info("CreateIngress has been started!")
-    time.sleep(10)
+    time.sleep(15)
     logging.info("CreateIngress has been finished!")
 
 def Cleanup(args):
