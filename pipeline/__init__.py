@@ -9,27 +9,27 @@ def CreateUser(args):
 
 def MigrateDB(args):
     logging.info("MigrateDB has been started!")
-    time.sleep(5)
+    time.sleep(6)
     logging.info("MigrateDB has been finished!")
 
 def CreateNamespace(args):
     logging.info("CreateNamespace has been started!")
-    time.sleep(5)
+    time.sleep(7)
     logging.info("CreateNamespace has been finished!")
 
 def CreateDeployment(args):
     logging.info("CreateDeployment has been started!")
-    time.sleep(5)
+    time.sleep(8)
     logging.info("CreateDeployment has been finished!")
 
 def CreateService(args):
     logging.info("CreateService has been started!")
-    time.sleep(5)
+    time.sleep(9)
     logging.info("CreateService has been finished!")
 
 def CreateIngress(args):
     logging.info("CreateIngress has been started!")
-    time.sleep(5)
+    time.sleep(10)
     logging.info("CreateIngress has been finished!")
 
 def Cleanup(args):
