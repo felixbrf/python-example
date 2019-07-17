@@ -2,6 +2,11 @@ from gaiasdk import sdk
 import logging
 import time
 
+def CreateUser2(args):
+    logging.info("CreateUser2 has been started!")
+    time.sleep(5)
+    logging.info("CreateUser2 has been finished!")
+
 def CreateUser(args):
     logging.info("CreateUser has been started!")
     time.sleep(5)
@@ -40,7 +45,8 @@ def Cleanup(args):
 def main():
     logging.basicConfig(level=logging.INFO)
     createuser = sdk.Job("Create DB User", "Creates a database user with least privileged permissions.", CreateUser)
-    migratedb = sdk.Job("DB Migration", "Imports newest test data dump and migrates to newest version.", MigrateDB, ["Create DB User"])
+    createuser2 = sdk.Job("Create DB User2", "Creates2 a database user with least privileged permissions.", CreateUser2)
+    migratedb = sdk.Job("DB Migration", "Imports newest test data dump and migrates to newest version.", MigrateDB, ["Create DB User", "Create DB User2"])
     createnamespace = sdk.Job("Create K8S Namespace", "Creates a new Kubernetes namespace for the new test environment.", CreateNamespace, ["DB Migration"])
     createdeployment = sdk.Job("Create K8S Deployment", "Creates a new Kubernetes deployment for the new test environment.", CreateDeployment, ["Create K8S Namespace"])
     createservice = sdk.Job("Create K8S Service", "Creates a new Kubernetes service for the new test environment.", CreateService, ["Create K8S Namespace"])
