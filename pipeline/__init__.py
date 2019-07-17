@@ -52,4 +52,4 @@ def main():
     createservice = sdk.Job("Create K8S Service", "Creates a new Kubernetes service for the new test environment.", CreateService, ["Create K8S Namespace"])
     createingress = sdk.Job("Create K8S Ingress", "Creates a new Kubernetes ingress for the new test environment.", CreateIngress, ["Create K8S Namespace"])
     cleanup = sdk.Job("Clean up", "Removes all temporary files.", Cleanup, ["Create K8S Deployment", "Create K8S Service", "Create K8S Ingress"])
-    sdk.serve([createuser, migratedb, createnamespace, createdeployment, createservice, createingress, cleanup])
+    sdk.serve([createuser, createuser2, migratedb, createnamespace, createdeployment, createservice, createingress, cleanup])
